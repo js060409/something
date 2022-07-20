@@ -1,0 +1,20 @@
+checking_mark_1 = str(input('생성부호'))
+checking_mark_2 = int(checking_mark_1)
+line = len(checking_mark_1)
+zero_count = str((line-1)*str(0))
+send_data = str(input('전송할 데이터'))
+check_data_1 = str(send_data+zero_count)
+check_data_2 = int(check_data_1)
+
+error_mark = str(check_data_2 % checking_mark_2)
+
+check_data_3 = str(send_data)
+check_data_4 = str(send_data+error_mark)
+check_data_5 = int(check_data_4)
+checking_mark_3 = int(checking_mark_1)
+num = (check_data_5 % checking_mark_3)
+if num == 0:
+    print('데이터가 정상적으로 전달되었습니다')
+else:
+    print('데이터 전송 과정중 오류가 발생했습니다.')
+print(num)
