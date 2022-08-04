@@ -53,16 +53,16 @@ def Dalgona_kit():
     kit_tool_price = int(input('달고나 키트에 사용되는 도구들의 가격을 입력하세요(단가)'))
     kit_price = int(input('이 달고나 키트를 1개당 얼마에 판매하시겠습니까?'))
         
-    kit_proceeds = (kit_price - kit_sugar_price - kit_tool_price - kit_soda_price)
+    Real_kit_price = (kit_sugar_price + kit_soda_price + kit_tool_price)
         
     kit_count = int(input('이 달고나 키트를 몇개 판매하시겠습니까?'))
         
-    dalgona_kit_proceeds = (kit_count * kit_proceeds) - (realkit_price * kit_count)
+    dalgona_kit_proceeds = (kit_count * kit_price) - (Real_kit_price * kit_count)
         
-    if dalgona_kit_proceeds > realkit_price:
+    if dalgona_kit_proceeds > 0:
         print('달고나 키트 판매를 통해 얻은 수익은 ',dalgona_kit_proceeds,'입니다. (흑자)')
             
-    elif dalgona_kit_proceeds <= realkit_price:
+    elif dalgona_kit_proceeds <= 0:
         print('달고나 키트 판매를 통해 얻은 손익은',dalgona_kit_proceeds,'입니다. (적자)')
             
 #여기까지는 달고나 키트의 재료비와 개당 가격을 설정하고 이로인해 얻을수 있는 수익과 이 수익을 얻으면 적자인지 흑자인지 알수 있게 해주는 프로그램
