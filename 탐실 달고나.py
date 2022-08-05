@@ -2,10 +2,19 @@
     
     
 def science_in_cooking():
-    print('달고나 속의 물리: ')
-    print('달고나 속의 화학: ')
-    print('달고나 속의 생명: ')
-    print('달고나 속의 지구: ')
+    answer = input('달고나 속에있는 과학들 (물리,화학,생물,지구 중 선택)')
+    
+    if answer == '물리':
+        print('')
+
+    elif answer == '화학':
+        print('')
+
+    elif answer == '생물':
+        print('')
+
+    elif answer == '지구':
+        print('')
 
 #달고나 속의 과학들을 설명해 주는 함수
 
