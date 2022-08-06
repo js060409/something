@@ -2,19 +2,30 @@
     
     
 def science_in_cooking():
-    answer = input('달고나 속에있는 과학들 (물리,화학,생물,지구 중 선택)')
-    
+    answer = input('달고나 속에있는 과학들 (물리,화학,생물,지구,모두 중 선택)')
+
+    physics = '달고나 속의 물리는'
+    chemistry = '달고나 속의 화학은'
+    earth = '달고나 속의 지구는'
+    living_things = '달고나 속의 생명은'
+
     if answer == '물리':
-        print('')
+        print(physics)
 
     elif answer == '화학':
-        print('')
+        print(chemistry)
 
     elif answer == '생물':
-        print('')
+        print(living_things)
 
     elif answer == '지구':
-        print('')
+        print(earth)
+    
+    elif answer == '모두':
+        print(physics)
+        print(chemistry)
+        print(living_things)
+        print(earth)
 
 #달고나 속의 과학들을 설명해 주는 함수
 
@@ -76,15 +87,22 @@ def Dalgona_kit():
             
 #여기까지는 달고나 키트의 재료비와 개당 가격을 설정하고 이로인해 얻을수 있는 수익과 이 수익을 얻으면 적자인지 흑자인지 알수 있게 해주는 프로그램
 
+def dalgona_history():
+    print('')
+
 
 print('10911 박종상 과학 탐구 실험 요리속 과학')
+print('조장: 박종상, 조원:박준원, 허원준, 화태원')
+print('진로 박종상(프로그래머), 박준원(생명을 사랑하는 사람), 허원준(세계적인 CEO), 화태원(역사 선생님)')
 print('다음 항목들중 사용할것을 입력하세요')
 
 print('달고나 속의 과학  (A)' )
 print('달고나 만드는 방법  (B)')
 print('설탕의 량으로 얼마나 많은 달고나를 만들수 있을까? (C)')
 print('달고나 키트 판매 시뮬레이터 (D)')
-answer = input('사용할 프로그램은? (A, B , C, D 중 선택)')
+print('달고나의 재료인 설탕속 역사 이야기 (E)')
+answer = input('사용할 프로그램은? (A, B , C, D, E 중 선택)')
+
 if answer == 'A':
     science_in_cooking()
     
@@ -97,6 +115,9 @@ elif answer == 'C':
 
 elif answer == 'D':
     Dalgona_kit()
+
+elif answer == 'E':
+    dalgona_history()
 
 else: 
     print('응답안 답이 A, B, C, D 중 존재하지 않습니다. ')
