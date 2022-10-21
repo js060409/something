@@ -1,0 +1,45 @@
+##싱글벙글 레전더리 등급 계산기 (소스코드 팝니다 5억원)
+
+def grade(numbers):
+
+    grade = numbers.split()
+    total = 0
+    print(grade)
+
+    for i in range(len(grade)):
+        total = total + int(grade[i])
+
+    average_grade = total/len(grade)
+
+    if 0 <= average_grade < 2 :
+        print('1 등급')
+    
+    elif 2 <= average_grade < 3 :
+        print('2 등급')
+
+    elif 3 <= average_grade < 4 :
+        print('3 등급')
+
+    elif 4 <= average_grade < 5 :
+        print('4 등급')
+
+    elif 5 <= average_grade < 6 :
+        print('5 등급')
+
+    elif 6 <= average_grade < 7 :
+        print('6 등급')
+
+    elif 7 <= average_grade < 8 :
+        print('7 등급')
+
+    elif 8 <= average_grade < 9 :
+        print('8 등급')
+
+    elif 9 <= average_grade < 10 :
+        print('9 등급')
+
+    else:
+        print('????')
+
+user_grade = input('등급 ')
+grade(user_grade)
