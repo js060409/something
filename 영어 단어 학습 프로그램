@@ -1,0 +1,66 @@
+import random
+
+score = 0
+score_board = []
+word_list = []
+
+
+print('몇개의 단어를 추가 하시겠습니까?')
+word_count = int(input())
+
+for i in range(word_count):
+  print('추가할 영어를 입력하세요:')
+  word_eng = input()
+  print('단어의 뜻을 입력하세요: ')
+  word_kr = input()
+  word_list.append(word_eng)
+  word_list.append(word_kr)
+
+print('단어 시험을 시작하겠습니까? (y 또는 n으로 입력합니다)')
+answer = input()
+
+if answer == 'n':
+  print('프로그램을 종료합니다')
+
+elif answer == 'y':
+  print('단어 학습을 시작합니다')
+  print('-' * 25)
+
+  for q in range(word_count):
+    rd_eng = int(random.randrange(0, word_count * 2, 2 ))
+    rd_kr = rd_eng + 1
+    rd_kr_or_eng = int(random.randrange(0, 2))
+
+    if rd_kr_or_eng == 0:
+      print(word_list[rd_eng],'의 뜻은? ')
+      kr_answer = input()
+
+      if kr_answer == word_list[rd_kr]:
+        print('정답 입니다')
+        score = score + 1
+        score_board.append('O')
+
+      elif kr_answer != word_list[rd_kr]:
+        print('땡 정답은 ',word_list[rd_kr],'입니다')
+        score_board.append('X')
+
+    elif rd_kr_or_eng == 1:
+        print(word_list[rd_kr],'의 철자는?')
+        eng_answer = input()
+
+        if eng_answer == word_list[rd_eng]:
+          print('정답 입니다')
+          score = score + 1
+          score_board.append('O')
+
+        elif eng_answer != word_list[rd_eng]:
+          print('땡 정답은',word_list[rd_eng],'입니다')
+          score_board.append('X')
+
+print('총 점수:', score)
+print('-' * 10 ,'점수판', '-'*10)
+print(score_board)
+print('-' * 29)
+print('단어 목록')
+print(word_list)
+print('-' * 29)
